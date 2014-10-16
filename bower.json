@@ -1,19 +1,19 @@
 {
-  "name": "seed-element",
-  "version": "0.0.0",
+  "name": "combo-input",
+  "version": "0.0.1",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "karsten <kwokoek@gmail.com>"
   ],
-  "description": "Element providing solution to no problem in particular.",
+  "description": "Custom element wrapper over combo controls",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
     "seed"
   ],
-  "main": "seed-element.html",
+  "main": "combo-input.html",
   "license": "MIT",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/kwokoek/combo-input",
   "ignore": [
     "/.*",
     "/tests/"
