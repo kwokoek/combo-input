@@ -3,7 +3,9 @@ combo-input
 
 A combination polymer custom element that wraps built in polymer input types.
 
-See polymer for more info at [polymer](https://www.polymer-project.org/)
+The polymer API style documenation on the combo-input are [here.](http://kwokoek.github.io/combo-input/components/combo-input/)
+
+See polymer for more info at [polymer.](https://www.polymer-project.org/)
 
 ## Build it
 
