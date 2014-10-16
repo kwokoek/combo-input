@@ -1,33 +1,28 @@
-seed-element
+combo-input
 ============
 
-See the [component page](http://polymerlabs.github.io/seed-element) for more information.
+A combination polymer custom element that wraps built in polymer input types.
 
-## Getting Started
+See polymer for more info at [polymer](https://www.polymer-project.org/)
 
-We've put together a [guide to seed-element](http://www.polymer-project.org/docs/start/reusableelements.html) to help get you rolling.
+## Build it
 
-## Testing Your Element
+Make a root development folder, and clone this repository in it.
 
-Add the logic specific to your new element and verify its functionality. Good unit tests are essential to your verification plan but a good way to quickly sanity test your component is to access your demo.html file via a local web server. There are several ways to do this but one easy method is to run a simple web server that ships with Python, using the commands:
+Now cd into the combo-input folder to build!
 
-```sh
+```
+cd combo-input
+bower install
+```
+
+Now we need to start a web server to serve up our demo page, which we need to run from one level up.
+
+```
+cd ..
 python -m SimpleHTTPServer
 ```
 
-Or other method using NodeJS:
+Now point your browser at our demo page
+```http://localhost:8000/combo-input/demo.html```
 
-```sh
-http-server ./
-```
-
-This starts a web server on port 8000, so you can test your new element by navigating a browser to `localhost:8000/test/index.html`.
-
-### web-component-tester
-
-The tests are also compatible with [web-component-tester](https://github.com/Polymer/web-component-tester). You can run them on multiple local browsers via:
-
-```sh
-npm install -g web-component-tester
-wct
-```
