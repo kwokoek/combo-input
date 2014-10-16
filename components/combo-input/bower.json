@@ -1,0 +1,29 @@
+{
+  "name": "combo-input",
+  "version": "0.0.1",
+  "authors": [
+    "karsten <kwokoek@gmail.com>"
+  ],
+  "description": "Custom element wrapper over combo controls",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "combo-input.html",
+  "license": "MIT",
+  "homepage": "https://github.com/kwokoek/combo-input",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.4.1",
+    "core-elements": "Polymer/core-elements#~0.4.2",
+    "paper-elements": "Polymer/paper-elements#~0.4.2"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^0.7.3"
+  }
+}

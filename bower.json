@@ -1,0 +1,7 @@
+{
+  "name": "combo-input#gh-pages",
+  "private": true,
+  "dependencies": {
+    "combo-input": "kwokoek/combo-input#master"
+  }
+}

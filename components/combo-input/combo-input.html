@@ -1,0 +1,108 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-input/core-input.html">
+<link rel="import" href="../paper-elements/paper-elements.html">
+
+<!--
+Group an input box and check box into a custom element.
+
+##### Example
+
+  <combo-input id='combo1' title="My field edits" edit_placeholder="Enter Name" edit_value="Joe Smith" checked_title="Use My Option" checked=false ></combo-input>
+
+@element combo-input
+@blurb Combine inputs
+@status alpha
+@homepage https://github.com/kwokoek/combo-input
+-->
+<polymer-element name="combo-input" attributes="title,edit_placeholder,edit_value,checked_title,checked">
+<template>
+
+<link rel="stylesheet" href="combo-input.css">
+
+<div class="combo-wrap">
+  <div class="combo-title">
+    {{title}}
+  </div>
+  <div>
+  </div>
+  <div class="combo-div">
+    <core-input placeholder={{edit_placeholder}} value={{edit_value}} on-change={{editHandler}}></core-input>
+  </div>
+  <div class="combo-div">
+    <paper-checkbox on-change={{checkedHandler}} checked={{checked}}></paper-checkbox>
+    <span class="check-title">{{checked_title}}</span>
+  </div>
+<div>
+
+</template>
+<script>
+Polymer({
+  publish: {
+    /**
+     * Title of edit block
+     * @attribute title
+     * @type string
+     */
+    /**
+     * Placeholder used in text edit box
+     * @attribute edit_placeholder
+     * @type string
+     * @default "Enter"
+     */
+    edit_placeholder:"Enter",
+    /**
+     * The value of the edit field
+     * @attribute edit_value
+     * @type string
+     */
+    /**
+     * The title for the checkbox
+     * @attribute checked_title
+     * @type string
+     */
+    /**
+     * The checkbox state
+     * @attribute checked
+     * @type bool
+     * @default false
+     */
+    checked:false,
+  },
+  /**
+   * The event is fired when the edit field content is updated
+   * @event edited
+   * @param {Object} detail
+   *   @param {string} detail.value The new string value in the edit box
+   */
+  /**
+   * The event is fired when the check box is set
+   * @event checked
+   * @param {Object} detail
+   *   @param {string} detail.checked bool to match checked state
+   */
+  editHandler: function(event, detail, sender) { 
+    // fire custom event
+    this.fire('edited', {msg: 'Edit value',value:this.edit_value});
+  },
+  checkedHandler: function(event, detail, sender) { 
+    // fire custom event
+    this.fire('checked', {msg: 'Checked state',checked:this.checked});
+  }
+
+})
+
+</script>
+
+</polymer-element>
+
+  /*
+  ready: function() {
+    //document.querySelector('.validation').addEventListener('input-invalid
+    console.log("READY");
+    var ps = document.querySelector('core-input');
+    console.log("PS",ps);
+    ps.addEventListener('change', function(e) {
+      console.log("Comm",e);
+
+    });
+   */
