@@ -1,6 +1,6 @@
 {
   "name": "combo-input",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "karsten <kwokoek@gmail.com>"
   ],
@@ -9,7 +9,7 @@
     "web-component",
     "web-components",
     "polymer",
-    "seed"
+    "input"
   ],
   "main": "combo-input.html",
   "license": "MIT",
