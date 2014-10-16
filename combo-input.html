@@ -1,0 +1,57 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-input/core-input.html">
+<link rel="import" href="../paper-elements/paper-elements.html">
+
+<polymer-element name="combo-input" attributes="title,edit_placeholder,edit_value,checked_title,checked">
+<template>
+
+<link rel="stylesheet" href="combo-input.css">
+
+<div class="combo-wrap">
+  <div class="combo-title">
+    {{title}}
+  </div>
+  <div>
+  </div>
+  <div class="combo-div">
+    <core-input placeholder={{edit_placeholder}} value={{edit_value}} on-change={{editHandler}}></core-input>
+  </div>
+  <div class="combo-div">
+    <paper-checkbox on-change={{checkedHandler}} checked={{checked}}></paper-checkbox>
+    <span class="check-title">{{checked_title}}</span>
+  </div>
+<div>
+
+</template>
+<script>
+Polymer({
+  publish: {
+    checked:false,
+    edit_placeholder:"Enter"
+  },
+  editHandler: function(event, detail, sender) { 
+    // fire custom event
+    this.fire('edit', {msg: 'edit',checked:this.edit_value});
+  },
+  checkedHandler: function(event, detail, sender) { 
+    // fire custom event
+    this.fire('checked', {msg: 'Check switch',checked:this.checked});
+  }
+
+})
+
+</script>
+
+</polymer-element>
+
+  /*
+  ready: function() {
+    //document.querySelector('.validation').addEventListener('input-invalid
+    console.log("READY");
+    var ps = document.querySelector('core-input');
+    console.log("PS",ps);
+    ps.addEventListener('change', function(e) {
+      console.log("Comm",e);
+
+    });
+   */

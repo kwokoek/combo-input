@@ -1,0 +1,26 @@
+.combo-wrap {
+  width:50%;
+  margin: 1em 0 1em 0;
+}
+.combo-title {
+  border-bottom: 1px solid #4285f4;
+}
+.combo-div {
+  display:flex;
+  margin: 20px;
+}
+.check-title {
+  margin-left: 16px;
+}
+core-input{
+  width: 100%;
+  border: 1px solid rgb(148, 148, 148);
+  padding: 4px 8px 4px 8px;
+  border-radius: 3px;
+}
+paper-checkbox::shadow #ink[checked] {
+    color: #4285f4;
+}
+paper-checkbox::shadow #checkbox.checked {
+    border-color: #4285f4;
+}

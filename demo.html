@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>combo-input Demo</title>
+
+  <script src="../platform/platform.js"></script>
+  <link rel="import" href="combo-input.html">
+
+  <style>
+    body {
+      margin:0;
+    }
+    #welcome {
+      margin-bottom: 2em;
+      background-color: rgb(249, 248, 248);
+      font-size: large;
+      font-weight: 600;
+      color: #333;
+      padding: 1em;
+    }
+    .display-combo {
+      padding: 0 1em 0 1em;
+    }
+
+  </style>
+
+</head>
+<body unresolved>
+
+<div id="welcome">
+Sample Container
+</div>
+<div class="display-combo">
+  <combo-input id='combo1' title="My field edits" edit_placeholder="Enter Name" edit_value="Joe Smith" checked_titl>
+</div>
+<div class="display-combo">
+  <combo-input id='combo2' title="My Second edit" edit_placeholder="Enter Color" checked_title="Favorite" checked=t>
+</div>
+<script>
+  // combo 1 events
+  document.querySelector('#combo1').addEventListener('edit', function(e) {
+      console.log("c1 edit",e.detail.checked);
+  });
+  document.querySelector('#combo1').addEventListener('checked', function(e) {
+      console.log("c1 checked",e.detail.checked);
+      console.log("Pulling the check manually",document.querySelector('#combo1')['checked']);
+  });
+  // combo 2
+  document.querySelector('#combo2').addEventListener('edit', function(e) {
+      console.log("c2 edit",e.detail.checked);
+  });
+  document.querySelector('#combo2').addEventListener('checked', function(e) {
+      console.log("c2 checked",e.detail.checked);
+  });
+</script>
+
+
+</body>
+</html>
